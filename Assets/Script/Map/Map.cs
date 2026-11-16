@@ -25,6 +25,6 @@ public class Map : MonoBehaviour
     private void Update()
     {
         var coords = new Vector3Int(0, 0, 0);
-        print(GetTileTypeAtWorldPos(coords));        
+        // print(GetTileTypeAtWorldPos(coords));        
     }
 }
