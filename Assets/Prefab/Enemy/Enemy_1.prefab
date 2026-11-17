@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6297980676041749093}
   - component: {fileID: 7945460563716407019}
   - component: {fileID: -1520087610464301317}
+  - component: {fileID: 1806320900329452622}
   - component: {fileID: -6870743372635443794}
   - component: {fileID: -5401463905771400540}
   m_Layer: 0
@@ -142,6 +143,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1806320900329452622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7715359257464815316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f011ac0cfb0e5ea43a5b730d4701c712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  max_life: 1
 --- !u!114 &-6870743372635443794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -175,7 +189,7 @@ MonoBehaviour:
   m_LoopMode: 0
   m_Method: 1
   m_Duration: 1
-  m_MaxSpeed: 10
+  m_MaxSpeed: 1
   m_EasingMode: 0
   m_AlignmentMode: 1
   m_ObjectForwardAxis: 2

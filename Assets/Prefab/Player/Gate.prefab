@@ -13,10 +13,10 @@ GameObject:
   - component: {fileID: 3834499755263186726}
   - component: {fileID: 5723987458694293849}
   - component: {fileID: -5898026369790420864}
-  - component: {fileID: 4762365579762450878}
+  - component: {fileID: -6690817675390305575}
   m_Layer: 0
   m_Name: Gate
-  m_TagString: Castle
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -141,7 +141,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &4762365579762450878
+--- !u!114 &-6690817675390305575
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8500766719105014193}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbc17aee2da6ef94ba9c0ffd54555f5e, type: 3}
+  m_Script: {fileID: 11500000, guid: f011ac0cfb0e5ea43a5b730d4701c712, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Castle
+  m_EditorClassIdentifier: Assembly-CSharp::Health
   max_life: 100

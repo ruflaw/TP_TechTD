@@ -1,3 +1,4 @@
+
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
@@ -5,26 +6,46 @@ public class Map : MonoBehaviour
 {
     [SerializeField] private Tilemap tilemap;
 
+    public Vector3Int GetCellPosition(Vector3 worldPosition)
+    {
+        return tilemap.WorldToCell(worldPosition);
+    }
+
+    public Vector3 GetCellCenterWorld(Vector3Int cellPosition)
+    {
+        return tilemap.GetCellCenterWorld(cellPosition);
+    }
+
     public TileType GetTileTypeAtWorldPos(Vector3 worldPosition)
     {
-        Vector3Int cellPos = tilemap.WorldToCell(worldPosition);
-        return GetTileTypeAtCell(cellPos);
+        return GetTileTypeAtCell(GetCellPosition(worldPosition));
     }
 
-    TileType GetTileTypeAtCell(Vector3Int cellPosition)
+    public TileType GetTileTypeAtCell(Vector3Int cellPosition)
     {
         GameTile tile = tilemap.GetTile<GameTile>(cellPosition);
-        if (tile == null)
-        {
-            return TileType.Air;
-        }
 
-        return tile.type;        
+        if (tile == null)
+            return TileType.Air;
+
+        return tile.type;
     }
-    
-    private void Update()
+
+    public bool IsOccupied(Vector3Int cellPosition)
     {
-        var coords = new Vector3Int(0, 0, 0);
-        // print(GetTileTypeAtWorldPos(coords));        
+        GameTile tile = tilemap.GetTile<GameTile>(cellPosition);
+
+        if (tile == null)
+            return false;
+
+        return tile.occupied;
+    }
+
+    public void SetOccupied(Vector3Int cellPosition, bool occupied)
+    {
+        GameTile tile = tilemap.GetTile<GameTile>(cellPosition);
+
+        if (tile != null)
+            tile.occupied = occupied;
     }
 }

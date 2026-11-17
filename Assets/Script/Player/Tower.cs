@@ -1,30 +1,24 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Splines;
 
-[SelectionBase]
 public class Tower : MonoBehaviour
 {
     private List<GameObject> _enemy = new List<GameObject>();
-    [SerializeField]
-    private float shootDelay;
+    [SerializeField] private float shootDelay;
+    [SerializeField] private int damage;
+
     private float nextShoot;
     private GameObject target;
-    [SerializeField]
-    private int damage;
 
     private void Update()
     {
-        if (_enemy.Count > 0)
-        {
-            StartCoroutine(AcquireTarget());
-            if (target != null && Time.time >= nextShoot)
-            {
-                Shoot(target);
-                nextShoot = Time.time + shootDelay;
-            }
+        AcquireTarget();
 
+        if (target != null && Time.time >= nextShoot)
+        {
+            Shoot(target);
+            nextShoot = Time.time + shootDelay;
         }
     }
 
@@ -33,7 +27,6 @@ public class Tower : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             _enemy.Add(other.gameObject);
-            other.GetComponent<Enemy>().AddTower(this.gameObject.GetComponent<Tower>());
         }
     }
 
@@ -45,37 +38,41 @@ public class Tower : MonoBehaviour
         }
     }
 
-    public void EnemyDeath(GameObject target)
+    public void EnemyDeath(GameObject enemy)
     {
-        _enemy.Remove(target);
+        _enemy.Remove(enemy);
+        if (target == enemy) target = null;
     }
 
     private void Shoot(GameObject target)
     {
-        target.GetComponent<Enemy>().TakeDamage(damage);
-        
+        target.GetComponent<Health>().TakeDamage(damage);
     }
 
-    private IEnumerator AcquireTarget()
+    private void AcquireTarget()
     {
-        float remainingPath = 0;
-        float targetRemaningPath = 0;
-        foreach (GameObject enemy in _enemy)
+        for (int i = _enemy.Count - 1; i >= 0; i--)
         {
-            remainingPath = (1f - enemy.GetComponent<SplineAnimate>().NormalizedTime) * enemy.GetComponent<Enemy>().splineContainer.CalculateLength();
-            if (remainingPath < targetRemaningPath)
+            if (_enemy[i] == null)
             {
-                targetRemaningPath = remainingPath;
-                target = enemy;
-            }
-
-            else if(targetRemaningPath == 0)
-            {
-                targetRemaningPath = remainingPath;
-                target = enemy;
+                _enemy.RemoveAt(i);
             }
         }
 
-        yield return new WaitForSeconds(shootDelay);
+        target = null;
+        float bestRemaining = float.MaxValue;
+
+        foreach (GameObject enemy in _enemy)
+        {
+            Enemy e = enemy.GetComponent<Enemy>();
+            SplineAnimate anim = enemy.GetComponent<SplineAnimate>();
+
+            float remaining = (1f - anim.NormalizedTime) * e.splineContainer.CalculateLength();
+            if (remaining < bestRemaining)
+            {
+                bestRemaining = remaining;
+                target = enemy;
+            }
+        }
     }
 }
