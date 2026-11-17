@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5459766895752535874}
   - component: {fileID: 1249308527337295436}
   - component: {fileID: 7389859948414067620}
-  - component: {fileID: 8004243390580414324}
+  - component: {fileID: 7632592451990135163}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Wall
@@ -141,7 +141,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8004243390580414324
+--- !u!114 &7632592451990135163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4786396892604425337}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3713f423c1a1ad04f83734718273a23d, type: 3}
+  m_Script: {fileID: 11500000, guid: f011ac0cfb0e5ea43a5b730d4701c712, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Caastle
-  max_life: 100
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  max_life: 50
