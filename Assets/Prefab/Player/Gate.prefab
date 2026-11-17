@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6690817675390305575}
   m_Layer: 0
   m_Name: Gate
-  m_TagString: Castle
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
