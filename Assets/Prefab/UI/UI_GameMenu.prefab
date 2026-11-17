@@ -332,7 +332,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 497084436563622014}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2210658085319414316}
+        m_TargetAssemblyTypeName: UI_Game_Manager, Assembly-CSharp
+        m_MethodName: CancelUsePrefab
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &801848822916680951
 GameObject:
   m_ObjectHideFlags: 0
@@ -559,6 +571,7 @@ GameObject:
   - component: {fileID: 8604270473461005394}
   - component: {fileID: 469068486424416126}
   - component: {fileID: 1025102728718505895}
+  - component: {fileID: 2210658085319414316}
   m_Layer: 5
   m_Name: UI_GameMenu
   m_TagString: Untagged
@@ -651,6 +664,22 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &2210658085319414316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1942068182415861645}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fb136c9a3bf22944b61ac1a2011c8c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI_Game_Manager
+  _tower1Prefab: {fileID: 4786396892604425337, guid: 5fad402846dbf1f408be96a6a74b16f9, type: 3}
+  _tower2Prefab: {fileID: 6536784614069907478, guid: 79e2011d00581df42bb93d2c7685aee2, type: 3}
+  _tower3Prefab: {fileID: 6536784614069907478, guid: 79e2011d00581df42bb93d2c7685aee2, type: 3}
+  _tower4Prefab: {fileID: 4786396892604425337, guid: 5fad402846dbf1f408be96a6a74b16f9, type: 3}
 --- !u!1 &2348439401163797865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,7 +1195,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6608533065672501020}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2210658085319414316}
+        m_TargetAssemblyTypeName: UI_Game_Manager, Assembly-CSharp
+        m_MethodName: TakeTower2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3751394768822115927
 GameObject:
   m_ObjectHideFlags: 0
@@ -1394,7 +1435,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6292082860603024366}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2210658085319414316}
+        m_TargetAssemblyTypeName: UI_Game_Manager, Assembly-CSharp
+        m_MethodName: TakeTower3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4070773125452768223
 GameObject:
   m_ObjectHideFlags: 0
@@ -1987,7 +2040,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3001255586755133477}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2210658085319414316}
+        m_TargetAssemblyTypeName: UI_Game_Manager, Assembly-CSharp
+        m_MethodName: TakeTower1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6514026978274735074
 GameObject:
   m_ObjectHideFlags: 0
@@ -2108,7 +2173,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 7059772939991049528}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2210658085319414316}
+        m_TargetAssemblyTypeName: UI_Game_Manager, Assembly-CSharp
+        m_MethodName: TakeTower4
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6716091053022161295
 GameObject:
   m_ObjectHideFlags: 0
