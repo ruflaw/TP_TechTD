@@ -201,6 +201,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1159991527605739488}
   - component: {fileID: 51358531742032995}
+  - component: {fileID: 4909033783017446014}
   m_Layer: 0
   m_Name: Gate 1
   m_TagString: Untagged
@@ -397,6 +398,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   max_life: 100
+--- !u!114 &4909033783017446014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6424136306416275801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2911b0d33993b1841a48277aaa84aa10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Currency_Manager
+  _MainUI: {fileID: 0}
 --- !u!1001 &10167836973098217
 PrefabInstance:
   m_ObjectHideFlags: 0
