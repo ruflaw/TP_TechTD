@@ -33,7 +33,7 @@ public class Wave_Generator : MonoBehaviour
 
     public enum Enemy_Type //Type d'ennemis, associé a la liste enemy-type
     {
-        Enemy00, Enemy01, Enemy02, Enemy03,
+        Soldier, Exoskeleton, Prisonner,
     }
 
     void Awake()

@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6599583730475035838
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4811746041959101916}
+  - component: {fileID: 7228496404455836550}
+  m_Layer: 0
+  m_Name: World
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4811746041959101916
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6599583730475035838}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7228496404455836550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6599583730475035838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa00989ff4e61184399170bdb5f0b617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Wave_Generator
+  enemy_type:
+  - {fileID: 4178185056683394433, guid: a3921d1eda9a6de4897324d479ec99fe, type: 3}
+  - {fileID: 4028493424322697294, guid: 053c0751c4dc3104fa7fa03d813dc2c1, type: 3}
+  - {fileID: 507642263766229650, guid: ee665cf188de7ee4b902a76f52d8c540, type: 3}
+  _path:
+  - spawn: {fileID: 0}
+    path: {fileID: 0}
+    _enemies:
+    - enemy: 0
+      number: 10
+      delay: 1.2
+      delay_end: 0
+  - spawn: {fileID: 0}
+    path: {fileID: 0}
+    _enemies:
+    - enemy: 0
+      number: 0
+      delay: 1
+      delay_end: 0
+  - spawn: {fileID: 0}
+    path: {fileID: 0}
+    _enemies:
+    - enemy: 0
+      number: 0
+      delay: 1
+      delay_end: 0
+  - spawn: {fileID: 0}
+    path: {fileID: 0}
+    _enemies:
+    - enemy: 0
+      number: 0
+      delay: 1
+      delay_end: 0
+  - spawn: {fileID: 0}
+    path: {fileID: 0}
+    _enemies:
+    - enemy: 0
+      number: 0
+      delay: 1
+      delay_end: 0
+  - spawn: {fileID: 0}
+    path: {fileID: 0}
+    _enemies:
+    - enemy: 0
+      number: 0
+      delay: 1
+      delay_end: 0
