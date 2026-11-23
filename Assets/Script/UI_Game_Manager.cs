@@ -1,6 +1,8 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.UI;
 public class UI_Game_Manager : MonoBehaviour
 {
     [SerializeField] private GameObject _tower1Prefab;
@@ -9,6 +11,9 @@ public class UI_Game_Manager : MonoBehaviour
     [SerializeField] private GameObject _tower4Prefab;
 
     [SerializeField] private Map _map;
+
+    [SerializeField] private Image _healthBarFilling;
+    [SerializeField] private TextMeshProUGUI _currencyText;
 
     private GameObject _prefabToUse;
     private MapElement _currentMapElement;
@@ -78,5 +83,15 @@ public class UI_Game_Manager : MonoBehaviour
     {
         _prefabToUse = null;
         print(_prefabToUse);
+    }
+
+    public void UpdateHealthPercent(float percent)
+    {
+        _healthBarFilling.fillAmount = percent;
+    }
+
+    public void UpdateCurrencyAmount(int CurrentCurrency)
+    {
+        _currencyText.text = CurrentCurrency.ToString();
     }
 }

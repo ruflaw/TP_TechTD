@@ -70,7 +70,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 1
-  m_FillAmount: 0.465
+  m_FillAmount: 0.771
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -680,6 +680,9 @@ MonoBehaviour:
   _tower2Prefab: {fileID: 6536784614069907478, guid: 79e2011d00581df42bb93d2c7685aee2, type: 3}
   _tower3Prefab: {fileID: 6536784614069907478, guid: 79e2011d00581df42bb93d2c7685aee2, type: 3}
   _tower4Prefab: {fileID: 4786396892604425337, guid: 5fad402846dbf1f408be96a6a74b16f9, type: 3}
+  _map: {fileID: 0}
+  _healthBarFilling: {fileID: 6351391256713316421}
+  _currencyText: {fileID: 2866179764507057702}
 --- !u!1 &2348439401163797865
 GameObject:
   m_ObjectHideFlags: 0
