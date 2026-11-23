@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1249308527337295436}
   - component: {fileID: 7389859948414067620}
   - component: {fileID: 7632592451990135163}
+  - component: {fileID: 4429977929381702456}
   m_Layer: 0
   m_Name: Wall
   m_TagString: Wall
@@ -154,3 +155,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   max_life: 50
+--- !u!114 &4429977929381702456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4786396892604425337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb05b1286aa2bcc448f8c43af5a239f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MapElement
+  size: {x: 1, y: 1}

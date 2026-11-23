@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6312985141101465129}
   - component: {fileID: 2840835402243459268}
   - component: {fileID: 1039615996682825631}
+  - component: {fileID: 536923457519061171}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -69,6 +70,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 2.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &536923457519061171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6536784614069907478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb05b1286aa2bcc448f8c43af5a239f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MapElement
+  size: {x: 1, y: 1}
 --- !u!1 &7736242248960673681
 GameObject:
   m_ObjectHideFlags: 0
