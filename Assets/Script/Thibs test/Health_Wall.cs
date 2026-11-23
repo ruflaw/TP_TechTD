@@ -17,6 +17,7 @@ public class Health_Wall : MonoBehaviour
         life -= damage;
         if (life < 0)
         {
+            //Ajouter game over
             Destroy(this.gameObject);
         }
     }
