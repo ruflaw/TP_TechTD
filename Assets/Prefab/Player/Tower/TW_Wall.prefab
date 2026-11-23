@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8689893132665615813}
   - component: {fileID: 2145072742167675737}
+  - component: {fileID: -2353847881450728133}
+  - component: {fileID: -101103063238156464}
   m_Layer: 0
   m_Name: TW_Wall
   m_TagString: Untagged
@@ -47,6 +49,42 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MapElement
   size: {x: 2, y: 1}
   _placeableOnTileType: 2
+--- !u!114 &-2353847881450728133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438246703732173089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f011ac0cfb0e5ea43a5b730d4701c712, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  max_life: 200
+  sous: 0
+  world: {fileID: 0}
+--- !u!65 &-101103063238156464
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 438246703732173089}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2, y: 1, z: 1}
+  m_Center: {x: 1, y: 0.5, z: 0.5}
 --- !u!1001 &2279871879328293161
 PrefabInstance:
   m_ObjectHideFlags: 0

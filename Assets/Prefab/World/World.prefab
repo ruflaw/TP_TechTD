@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4811746041959101916}
   - component: {fileID: 7228496404455836550}
+  - component: {fileID: 7132571529193834454}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -91,3 +92,16 @@ MonoBehaviour:
       number: 0
       delay: 1
       delay_end: 0
+--- !u!114 &7132571529193834454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6599583730475035838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2911b0d33993b1841a48277aaa84aa10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Currency_Manager
+  _MainUI: {fileID: 0}
