@@ -3,27 +3,98 @@ using UnityEngine;
 public class MapElement : MonoBehaviour
 {
     [SerializeField] private Vector2Int size = Vector2Int.one;
+    [SerializeField] private TileType _placeableOnTileType = TileType.Grass;
 
     private Map _map;
     private Vector3Int _origin;
+
+    private int _rotation; // 0 = 0°, 1 = 90°, 2 = 180°, 3 = 270°
+    private bool _canPlace;
+    private bool _isPlaced;
+
     public Vector2Int Size => size;
+    public bool CanPlace => _canPlace;
+    public bool IsPlaced => _isPlaced;
 
     /// <summary>
-    /// Initializes this element and registers its occupied cells.
+    /// Initializes the element for placement previewing.
     /// </summary>
-    public void Initialize(Map map, Vector3Int origin)
+    public void Initialize(Map map)
     {
         _map = map;
-        _origin = origin;
+        _isPlaced = false;
+    }
 
+    /// <summary>
+    /// Snaps the element to the grid and checks whether it can be placed.
+    /// Returns true if placement is valid.
+    /// </summary>
+    public bool SetPosition(Vector3 worldPosition)
+    {
+        if (_isPlaced || _map == null)
+            return false;
+
+        _origin = _map.GetCellPosition(worldPosition);
+        transform.position = _map.GetCellCenterWorld(_origin);
+        _canPlace = CanPlaceAt(_origin);
+
+        return _canPlace;
+    }
+
+    /// <summary>
+    /// Rotates the element 90 degrees clockwise and re-evaluates placement.
+    /// </summary>
+    public void Rotate()
+    {
+        if (_isPlaced)
+            return;
+
+        _rotation = (_rotation + 1) % 4;
+        transform.rotation = Quaternion.Euler(0f, 0f, -90f * _rotation);
+        _canPlace = CanPlaceAt(_origin);
+    }
+
+    /// <summary>
+    /// Locks the element into place and marks its grid cells as occupied.
+    /// </summary>
+    public bool ConfirmPlacement()
+    {
+        if (_isPlaced || !_canPlace)
+            return false;
+
+        _isPlaced = true;
         SetOccupied(true);
+        return true;
+    }
+
+    private bool CanPlaceAt(Vector3Int origin)
+    {
+        Vector2Int rotatedSize = GetRotatedSize();
+
+        for (int x = 0; x < rotatedSize.x; x++)
+        {
+            for (int y = 0; y < rotatedSize.y; y++)
+            {
+                Vector3Int cell = origin + new Vector3Int(x, y, 0);
+
+                if (_map.GetTileTypeAtCell(cell) != _placeableOnTileType)
+                    return false;
+
+                if (_map.IsOccupied(cell))
+                    return false;
+            }
+        }
+
+        return true;
     }
 
     private void SetOccupied(bool occupied)
     {
-        for (int x = 0; x < size.x; x++)
+        Vector2Int rotatedSize = GetRotatedSize();
+
+        for (int x = 0; x < rotatedSize.x; x++)
         {
-            for (int y = 0; y < size.y; y++)
+            for (int y = 0; y < rotatedSize.y; y++)
             {
                 Vector3Int cell = _origin + new Vector3Int(x, y, 0);
                 _map.SetOccupied(cell, occupied);
@@ -31,11 +102,21 @@ public class MapElement : MonoBehaviour
         }
     }
 
+    public Vector2Int GetRotatedSize()
+    {
+        // A 90 or 270 degree rotation swaps width and height.
+        if (_rotation % 2 != 0)
+            return new Vector2Int(size.y, size.x);
+
+        return size;
+    }
+
     private void OnDestroy()
     {
-        if (_map == null)
-            return;
-
-        SetOccupied(false);
+        // Only free tiles if the element was actually placed on the map.
+        if (_map != null && _isPlaced)
+        {
+            SetOccupied(false);
+        }
     }
 }

@@ -11,71 +11,66 @@ public class UI_Game_Manager : MonoBehaviour
     [SerializeField] private Map _map;
 
     private GameObject _prefabToUse;
+    private MapElement _currentMapElement;
 
-    //private GameObject _GOtoPlace;
-    private MapPrefabPlacer _prefabPlacer;
-
-    private void AddMapPrefabPlacerComponent(GameObject prefab)
+    private void CreatePrefabInstance()
     {
-        var go = new GameObject();
-        
-        go.AddComponent<MapPrefabPlacer>();
-        _prefabPlacer = go.GetComponent<MapPrefabPlacer>();
-        print(_prefabPlacer);
+        if (!_prefabToUse) return;
 
-        _prefabPlacer.Initialize(_map,_prefabToUse,TileType.Grass);
+        var go = Instantiate(_prefabToUse);
+        _currentMapElement = go.GetComponent<MapElement>();
+        _currentMapElement.Initialize(_map);
     }
 
     private void Update()
     {
-        if (_prefabPlacer != null)
+        if (!_currentMapElement)
+            return;
+
+        var mousePos = Pointer.current.position.ReadValue();
+        Ray ray = Camera.main.ScreenPointToRay(mousePos);
+
+        bool hasClickMouse = InputSystem.actions.FindAction("Attack").WasPressedThisFrame();
+
+        bool hasHit = Physics.Raycast(ray, out RaycastHit hit);
+        if (hasHit)
         {
-            var mousePos = Pointer.current.position.ReadValue();
-            Ray ray = Camera.main.ScreenPointToRay(mousePos);
+            _currentMapElement.SetPosition(hit.point);
 
-            bool hasClickMouse = InputSystem.actions.FindAction("Attack").WasPressedThisFrame();
-
-            bool hasHit = Physics.Raycast(ray, out RaycastHit hit);
-            if (hasHit)
+            if (hasClickMouse)
             {
-                _prefabPlacer.SetPosition(hit.point);
-
-                if (hasClickMouse)
-                {
-                    print("ClickEtTouche");
-                    _prefabPlacer.Confirm();
-                }
+                print("ClickEtTouche");
+                _currentMapElement.ConfirmPlacement();
             }
         }
     }
-
 
     // the buttons scripts
     public void TakeTower1()
     {
         _prefabToUse = _tower1Prefab;
-        AddMapPrefabPlacerComponent(_prefabToUse);
+        CreatePrefabInstance();
         print(_prefabToUse.name);
     }
 
     public void TakeTower2()
     {
         _prefabToUse = _tower2Prefab;
-        AddMapPrefabPlacerComponent(_prefabToUse);
+        CreatePrefabInstance();
         print(_prefabToUse.name);
     }
 
     public void TakeTower3()
     {
         _prefabToUse = _tower3Prefab;
-        AddMapPrefabPlacerComponent(_prefabToUse);
+        CreatePrefabInstance();
         print(_prefabToUse.name);
     }
 
     public void TakeTower4()
     {
         _prefabToUse = _tower4Prefab;
-        AddMapPrefabPlacerComponent(_prefabToUse);
+        CreatePrefabInstance();
         print(_prefabToUse.name);
     }
 

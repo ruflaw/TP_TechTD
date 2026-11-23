@@ -35,4 +35,4 @@ MonoBehaviour:
   m_Flags: 1
   m_ColliderType: 1
   type: 2
-  isWalkable: 1
+  occupied: 0
