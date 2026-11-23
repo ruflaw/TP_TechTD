@@ -30,15 +30,15 @@ public class UI_Game_Manager : MonoBehaviour
     {
         if (_prefabPlacer != null)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Pointer.current.position.ReadValue());
+            var mousePos = Pointer.current.position.ReadValue();
+            Ray ray = Camera.main.ScreenPointToRay(mousePos);
 
             bool hasClickMouse = InputSystem.actions.FindAction("Attack").WasPressedThisFrame();
 
             bool hasHit = Physics.Raycast(ray, out RaycastHit hit);
             if (hasHit)
             {
-                print("TonPère");
-                _prefabPlacer.SetPosition(hit.transform.position);
+                _prefabPlacer.SetPosition(hit.point);
             }
         }
     }
