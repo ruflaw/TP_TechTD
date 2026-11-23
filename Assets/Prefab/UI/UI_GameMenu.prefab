@@ -140,7 +140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tower
+  m_text: Wall
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -676,10 +676,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb136c9a3bf22944b61ac1a2011c8c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UI_Game_Manager
-  _tower1Prefab: {fileID: 4786396892604425337, guid: 5fad402846dbf1f408be96a6a74b16f9, type: 3}
-  _tower2Prefab: {fileID: 6536784614069907478, guid: 79e2011d00581df42bb93d2c7685aee2, type: 3}
-  _tower3Prefab: {fileID: 6536784614069907478, guid: 79e2011d00581df42bb93d2c7685aee2, type: 3}
-  _tower4Prefab: {fileID: 4786396892604425337, guid: 5fad402846dbf1f408be96a6a74b16f9, type: 3}
+  _tower1Prefab: {fileID: 4026514559177641167, guid: 7c085fb1e423cd54f8037d45261182a1, type: 3}
+  _tower2Prefab: {fileID: 5156261753420384047, guid: b347558ab86b4544bb4eac8b4b89ed4d, type: 3}
+  _tower3Prefab: {fileID: 438246703732173089, guid: 64966ad2e1d5be04dbab3361f14fcafa, type: 3}
+  _tower4Prefab: {fileID: 438246703732173089, guid: 64966ad2e1d5be04dbab3361f14fcafa, type: 3}
   _map: {fileID: 0}
   _healthBarFilling: {fileID: 6351391256713316421}
   _currencyText: {fileID: 2866179764507057702}
@@ -1006,7 +1006,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tower
+  m_text: Sniper
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2358,7 +2358,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tower
+  m_text: Spike
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
