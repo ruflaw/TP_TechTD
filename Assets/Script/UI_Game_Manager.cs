@@ -29,23 +29,38 @@ public class UI_Game_Manager : MonoBehaviour
 
     private void Update()
     {
-        if (!_currentMapElement)
-            return;
 
         var mousePos = Pointer.current.position.ReadValue();
         Ray ray = Camera.main.ScreenPointToRay(mousePos);
 
         bool hasClickMouse = InputSystem.actions.FindAction("Attack").WasPressedThisFrame();
+        bool hasInteracted = InputSystem.actions.FindAction("Interact").WasPressedThisFrame();
 
         bool hasHit = Physics.Raycast(ray, out RaycastHit hit);
         if (hasHit)
         {
-            _currentMapElement.SetPosition(hit.point);
-
-            if (hasClickMouse)
+            if ( _currentMapElement != null)
             {
-                print("ClickEtTouche");
-                _currentMapElement.ConfirmPlacement();
+                _currentMapElement.SetPosition(hit.point);
+
+                if (hasClickMouse)
+                {
+                    _currentMapElement.ConfirmPlacement();
+                    _currentMapElement = null;
+                }
+                if (hasInteracted)
+                {
+                    _currentMapElement.Rotate();
+                }
+            }
+            else if (_currentMapElement == null)
+            {
+                var cellPos = _map.GetCellPosition(hit.point);
+                var cellObject = _map.GetCellOccupiedObject(cellPos);
+                if (cellObject != null && hasClickMouse)
+                {
+                    Destroy(cellObject);
+                }
             }
         }
     }
