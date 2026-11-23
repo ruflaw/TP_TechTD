@@ -5,7 +5,7 @@ using UnityEngine.Tilemaps;
 public class Map : MonoBehaviour
 {
     [SerializeField] private Tilemap tilemap;
-    private Dictionary<Vector3Int, bool> _occupiedDict = new Dictionary<Vector3Int, bool>();
+    private Dictionary<Vector3Int, GameObject> _occupiedDict = new Dictionary<Vector3Int, GameObject>();
 
     public Vector3Int GetCellPosition(Vector3 worldPosition)
     {
@@ -32,16 +32,17 @@ public class Map : MonoBehaviour
         return tile.type;
     }
 
-    public bool IsOccupied(Vector3Int cellPosition)
+    public GameObject GetCellOccupiedObject(Vector3Int cellPosition)
     {
-        return _occupiedDict.TryGetValue(cellPosition, out bool occupied) && occupied;
+        var obj = _occupiedDict.TryGetValue(cellPosition, out GameObject inst);
+        return obj ? inst : null;
     }
 
-    public void SetOccupied(Vector3Int cellPosition, bool occupied)
+    public void SetOccupied(Vector3Int cellPosition, GameObject inst)
     {
-        if (occupied)
+        if (inst)
         {
-            _occupiedDict[cellPosition] = true;
+            _occupiedDict[cellPosition] = inst;
         }
         else
         {
