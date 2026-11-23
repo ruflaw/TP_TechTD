@@ -36,7 +36,10 @@ public class Map : MonoBehaviour
         GameTile tile = tilemap.GetTile<GameTile>(cellPosition);
 
         if (tile == null)
+        {
+            print("appelTileOccupe");
             return false;
+        }
 
         return tile.occupied;
     }
@@ -46,6 +49,8 @@ public class Map : MonoBehaviour
         GameTile tile = tilemap.GetTile<GameTile>(cellPosition);
 
         if (tile != null)
+        {
             tile.occupied = occupied;
+        }
     }
 }

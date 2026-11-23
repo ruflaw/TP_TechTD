@@ -55,11 +55,15 @@ public class MapPrefabPlacer : MonoBehaviour
 
                 TileType cellTileType = _map.GetTileTypeAtCell(cell);
                 if (cellTileType != _tileType)
+                {
+                    print("mauvaiseTile");
                     return false;
+                }
 
                 // Check whether the tile is already occupied.
                 if (_map.IsOccupied(cell))
                 {
+                    print("occupe");
                     return false;
                 }
             }
@@ -99,7 +103,10 @@ public class MapPrefabPlacer : MonoBehaviour
     public void Confirm()
     {
         if (!_canPlace)
+        {
+            print("Can'tPlace");
             return;
+        }
 
         Vector3Int origin = _map.GetCellPosition(_instance.transform.position);
 

@@ -23,7 +23,7 @@ public class UI_Game_Manager : MonoBehaviour
         _prefabPlacer = go.GetComponent<MapPrefabPlacer>();
         print(_prefabPlacer);
 
-        _prefabPlacer.Initialize(_map,_prefabToUse,TileType.Path);
+        _prefabPlacer.Initialize(_map,_prefabToUse,TileType.Grass);
     }
 
     private void Update()
@@ -39,6 +39,12 @@ public class UI_Game_Manager : MonoBehaviour
             if (hasHit)
             {
                 _prefabPlacer.SetPosition(hit.point);
+
+                if (hasClickMouse)
+                {
+                    print("ClickEtTouche");
+                    _prefabPlacer.Confirm();
+                }
             }
         }
     }
