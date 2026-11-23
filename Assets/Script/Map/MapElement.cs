@@ -114,7 +114,7 @@ public class MapElement : MonoBehaviour
             {
                 Vector3Int cell = origin + new Vector3Int(x, y, 0);
 
-                if (_map.GetTileTypeAtCell(cell) != _placeableOnTileType)
+                if ((_map.GetTileTypeAtCell(cell) & _placeableOnTileType) == 0)
                     return false;
 
                 if (_map.GetCellOccupiedObject(cell) != null)
