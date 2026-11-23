@@ -50,7 +50,7 @@ public class MapElement : MonoBehaviour
             return;
 
         _rotation = (_rotation + 1) % 4;
-        transform.rotation = Quaternion.Euler(0f, 0f, -90f * _rotation);
+        transform.rotation = Quaternion.Euler(0f, -90f * _rotation, 0f);
         _canPlace = CanPlaceAt(_origin);
     }
 
