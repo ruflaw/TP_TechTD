@@ -63,10 +63,8 @@ public class MapElement : MonoBehaviour
         if (_map == null)
             return;
 
-        // +90f rotates clockwise around the Y-axis in Unity
         transform.rotation = Quaternion.Euler(0f, 90f * _rotation, 0f);
 
-        // Replace 1f with _map.CellSize if your Tilemap cell size is not 1x1
         float cellSize = 1f; 
         float halfCell = cellSize * 0.5f;
 
@@ -76,16 +74,16 @@ public class MapElement : MonoBehaviour
 
         switch (_rotation)
         {
-            case 0: // 0°: Pivot stays at bottom-left
+            case 0: 
                 offset = Vector3.zero;
                 break;
-            case 1: // 90° CW: Local +X points to World -Z, shift +Z by size.x
+            case 1: 
                 offset = new Vector3(0f, 0f, size.x * cellSize);
                 break;
-            case 2: // 180° CW: Local +X/-Z point to World -X/-Z, shift both
+            case 2: 
                 offset = new Vector3(size.x * cellSize, 0f, size.y * cellSize);
                 break;
-            case 3: // 270° CW: Local +Z points to World -X, shift +X by size.y
+            case 3: 
                 offset = new Vector3(size.y * cellSize, 0f, 0f);
                 break;
         }
