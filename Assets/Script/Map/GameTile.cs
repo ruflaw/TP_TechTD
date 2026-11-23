@@ -12,5 +12,5 @@ public enum TileType
 public class GameTile : Tile
 {
     public TileType type;
-    public bool occupied = true;
+    public bool occupied = false;
 }
