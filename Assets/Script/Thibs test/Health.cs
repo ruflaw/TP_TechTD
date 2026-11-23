@@ -7,11 +7,17 @@ public class Health : MonoBehaviour
     private int life = 1;
     [SerializeField]
     private int sous;
-    [SerializeField] private GameObject world;
+    private GameObject world;
 
     void Start()
     {
         life = max_life;
+        
+    }
+
+    public void AssignWorld(GameObject world_)
+    {
+        world = world_;
     }
 
     

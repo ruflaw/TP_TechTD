@@ -63,6 +63,7 @@ public class Wave_Generator : MonoBehaviour
                 a.GetComponent<Enemy>().splineContainer = path; // Renseigne a l'enemy son spline
                 a.GetComponent<SplineAnimate>().Container = path; // Renseigne a l'enemy son spline
                 a.GetComponent<SplineAnimate>().Play(); // Lance le mouvement
+                a.GetComponent<Health>().AssignWorld(this.gameObject);
                 count--;
                 yield return new WaitForSeconds(enemy.delay); // Delay au seins d'un groupe d'enemy
             }

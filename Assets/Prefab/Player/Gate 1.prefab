@@ -200,12 +200,12 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1159991527605739488}
-  - component: {fileID: 51358531742032995}
   - component: {fileID: 3713496921159749188}
   - component: {fileID: -3517243406716450356}
+  - component: {fileID: -8798453406358279523}
   m_Layer: 0
   m_Name: Gate 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -386,21 +386,6 @@ Transform:
   - {fileID: 4853139776295725055}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &51358531742032995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6424136306416275801}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f011ac0cfb0e5ea43a5b730d4701c712, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Health
-  max_life: 100
-  sous: 0
-  world: {fileID: 0}
 --- !u!54 &3713496921159749188
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -449,6 +434,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 32, y: 5, z: 2}
   m_Center: {x: 0, y: 2.5, z: 1}
+--- !u!114 &-8798453406358279523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6424136306416275801}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fd492e7b0f050b47a200ff04e2cba69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health_Wall
+  max_life: 100
 --- !u!1001 &10167836973098217
 PrefabInstance:
   m_ObjectHideFlags: 0
