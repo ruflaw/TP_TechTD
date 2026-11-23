@@ -45,8 +45,10 @@ public class UI_Game_Manager : MonoBehaviour
 
                 if (hasClickMouse)
                 {
-                    _currentMapElement.ConfirmPlacement();
-                    _currentMapElement = null;
+                    if (_currentMapElement.TryConfirmPlacement())
+                    {
+                        _currentMapElement = null;   
+                    }
                 }
                 if (hasInteracted)
                 {

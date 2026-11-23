@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb05b1286aa2bcc448f8c43af5a239f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MapElement
-  size: {x: 1, y: 1}
+  size: {x: 4, y: 2}
   _placeableOnTileType: 1
 --- !u!1001 &2377066631433711195
 PrefabInstance:
@@ -65,7 +65,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2b50ae9ba7b79b469c2b7c6b549efe2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11
+      value: -11.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2b50ae9ba7b79b469c2b7c6b549efe2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -73,7 +73,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2b50ae9ba7b79b469c2b7c6b549efe2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1
+      value: 0.91
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a2b50ae9ba7b79b469c2b7c6b549efe2, type: 3}
       propertyPath: m_LocalRotation.w

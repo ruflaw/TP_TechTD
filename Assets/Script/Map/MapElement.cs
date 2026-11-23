@@ -35,7 +35,7 @@ public class MapElement : MonoBehaviour
             return false;
 
         _origin = _map.GetCellPosition(worldPosition);
-        transform.position = _map.GetCellCenterWorld(_origin);
+        UpdateVisualTransform();
         _canPlace = CanPlaceAt(_origin);
 
         return _canPlace;
@@ -50,14 +50,53 @@ public class MapElement : MonoBehaviour
             return;
 
         _rotation = (_rotation + 1) % 4;
-        transform.rotation = Quaternion.Euler(0f, -90f * _rotation, 0f);
+        UpdateVisualTransform();
         _canPlace = CanPlaceAt(_origin);
+    }
+
+    /// <summary>
+    /// Positions and rotates the transform so the mesh stays anchored to the bottom-left (_origin) cell
+    /// while expanding toward +X and +Z.
+    /// </summary>
+    private void UpdateVisualTransform()
+    {
+        if (_map == null)
+            return;
+
+        // +90f rotates clockwise around the Y-axis in Unity
+        transform.rotation = Quaternion.Euler(0f, 90f * _rotation, 0f);
+
+        // Replace 1f with _map.CellSize if your Tilemap cell size is not 1x1
+        float cellSize = 1f; 
+        float halfCell = cellSize * 0.5f;
+
+        // Shift from the center of the origin tile to its bottom-left (0,0,0) corner
+        Vector3 bottomLeftCorner = _map.GetCellCenterWorld(_origin) - new Vector3(halfCell, 0f, halfCell);
+        Vector3 offset = Vector3.zero;
+
+        switch (_rotation)
+        {
+            case 0: // 0°: Pivot stays at bottom-left
+                offset = Vector3.zero;
+                break;
+            case 1: // 90° CW: Local +X points to World -Z, shift +Z by size.x
+                offset = new Vector3(0f, 0f, size.x * cellSize);
+                break;
+            case 2: // 180° CW: Local +X/-Z point to World -X/-Z, shift both
+                offset = new Vector3(size.x * cellSize, 0f, size.y * cellSize);
+                break;
+            case 3: // 270° CW: Local +Z points to World -X, shift +X by size.y
+                offset = new Vector3(size.y * cellSize, 0f, 0f);
+                break;
+        }
+
+        transform.position = bottomLeftCorner + offset;
     }
 
     /// <summary>
     /// Locks the element into place and marks its grid cells as occupied.
     /// </summary>
-    public bool ConfirmPlacement()
+    public bool TryConfirmPlacement()
     {
         if (_isPlaced || !_canPlace)
             return false;
@@ -104,7 +143,6 @@ public class MapElement : MonoBehaviour
 
     public Vector2Int GetRotatedSize()
     {
-        // A 90 or 270 degree rotation swaps width and height.
         if (_rotation % 2 != 0)
             return new Vector2Int(size.y, size.x);
 
@@ -113,7 +151,6 @@ public class MapElement : MonoBehaviour
 
     private void OnDestroy()
     {
-        // Only free tiles if the element was actually placed on the map.
         if (_map != null && _isPlaced)
         {
             SetOccupied(false);
