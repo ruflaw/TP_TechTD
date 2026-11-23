@@ -100,6 +100,10 @@ public class UI_Game_Manager : MonoBehaviour
     {
         _prefabToUse = null;
         print(_prefabToUse);
+        if (_currentMapElement  != null)
+        {
+            Destroy(_currentMapElement.gameObject);
+        }
     }
 
     public void UpdateHealthPercent(float percent)
