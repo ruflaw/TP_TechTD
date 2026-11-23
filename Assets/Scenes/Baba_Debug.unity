@@ -347,6 +347,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI_GameMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 2210658085319414316, guid: 60a4a51da2e385e45a3c46e8133beafa, type: 3}
+      propertyPath: _map
+      value: 
+      objectReference: {fileID: 2083890430}
     - target: {fileID: 2564888285173259152, guid: 60a4a51da2e385e45a3c46e8133beafa, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -698,6 +702,9 @@ GameObject:
   - component: {fileID: 1953670800}
   - component: {fileID: 1953670798}
   - component: {fileID: 1953670799}
+  - component: {fileID: 1953670802}
+  - component: {fileID: 1953670801}
+  - component: {fileID: 1953670803}
   m_Layer: 0
   m_Name: Tilemap
   m_TagString: Untagged
@@ -8259,14 +8266,13 @@ TilemapRenderer:
   m_SortOrder: 0
   m_Mode: 0
   m_DetectChunkCullingBounds: 0
---- !u!4 &1953670800
-Transform:
+--- !u!224 &1953670800
+RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1953670797}
-  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -8274,6 +8280,56 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2083890432}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1953670801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953670797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9353b7d498b954a06ae1228982925d0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.RaycastReceiver
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1953670802
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953670797}
+  m_CullTransparentMesh: 1
+--- !u!65 &1953670803
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1953670797}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 35, y: 23, z: 0}
+  m_Center: {x: -2.5, y: -1.5, z: 0}
 --- !u!1 &2083890429
 GameObject:
   m_ObjectHideFlags: 0
