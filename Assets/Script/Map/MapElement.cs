@@ -80,7 +80,7 @@ public class MapElement : MonoBehaviour
                 if (_map.GetTileTypeAtCell(cell) != _placeableOnTileType)
                     return false;
 
-                if (_map.IsOccupied(cell))
+                if (_map.GetCellOccupiedObject(cell) != null)
                     return false;
             }
         }
@@ -97,7 +97,7 @@ public class MapElement : MonoBehaviour
             for (int y = 0; y < rotatedSize.y; y++)
             {
                 Vector3Int cell = _origin + new Vector3Int(x, y, 0);
-                _map.SetOccupied(cell, occupied);
+                _map.SetOccupied(cell, occupied ? gameObject : null);
             }
         }
     }
