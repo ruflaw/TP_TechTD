@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -1468615842824536872}
   - component: {fileID: -5354540889931143802}
   m_Layer: 3
-  m_Name: EN_fatty
+  m_Name: EN_Exo
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
