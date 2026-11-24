@@ -61,8 +61,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 629cf980a1231c348bbdceff38f8f0a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower
-  shootDelay: 1
-  damage: 3
+  shootDelay: 0.5
+  damage: 4
 --- !u!135 &7083587156980852288
 SphereCollider:
   m_ObjectHideFlags: 0

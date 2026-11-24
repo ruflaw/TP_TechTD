@@ -61,8 +61,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9a2aefb9048df749a1881da5a029448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Tower_Spine
-  shootDelay: 0.5
-  damage: 2
+  shootDelay: 1
+  damage: 5
 --- !u!65 &8220171101634410760
 BoxCollider:
   m_ObjectHideFlags: 0
