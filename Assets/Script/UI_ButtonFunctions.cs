@@ -9,10 +9,12 @@ public class UI_ButtonFunctions : MonoBehaviour
     public void RetryButton()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Time.timeScale = 1.0f;
     }
 
     public void StartMainScene()
     {
         SceneManager.LoadScene(MainSceneName);
+        Time.timeScale = 1.0f;
     }
 }
