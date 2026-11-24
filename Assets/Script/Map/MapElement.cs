@@ -23,6 +23,7 @@ public class MapElement : MonoBehaviour
     {
         _map = map;
         _isPlaced = false;
+        ComponentsSetupEnabled(false);
     }
 
     /// <summary>
@@ -101,6 +102,7 @@ public class MapElement : MonoBehaviour
 
         _isPlaced = true;
         SetOccupied(true);
+        ComponentsSetupEnabled(true);
         return true;
     }
 
@@ -153,5 +155,13 @@ public class MapElement : MonoBehaviour
         {
             SetOccupied(false);
         }
+    }
+
+    private void ComponentsSetupEnabled(bool enabled)
+    {
+        if (TryGetComponent<Generator>(out var gen)) gen.enabled = enabled;
+        if (TryGetComponent<Tower_Spine>(out var ts)) ts.enabled = enabled;
+        if (TryGetComponent<Tower>(out var tow)) tow.enabled = enabled;
+        if (TryGetComponent<Collider>(out var collider)) collider.enabled = enabled;
     }
 }
