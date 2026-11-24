@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 765611097138523721}
   - component: {fileID: 8667982013224985206}
+  - component: {fileID: -8111930791321241114}
+  - component: {fileID: 8220171101634410760}
   m_Layer: 0
   m_Name: TW_Spike
   m_TagString: Untagged
@@ -47,6 +49,41 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MapElement
   size: {x: 4, y: 2}
   _placeableOnTileType: 1
+--- !u!114 &-8111930791321241114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5156261753420384047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9a2aefb9048df749a1881da5a029448, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Tower_Spine
+  shootDelay: 0.5
+  damage: 2
+--- !u!65 &8220171101634410760
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5156261753420384047}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 4, y: 2, z: 4}
+  m_Center: {x: 2, y: 1, z: 2}
 --- !u!1001 &2377066631433711195
 PrefabInstance:
   m_ObjectHideFlags: 0
