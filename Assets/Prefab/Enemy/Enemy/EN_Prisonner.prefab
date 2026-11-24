@@ -51,8 +51,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f011ac0cfb0e5ea43a5b730d4701c712, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
-  max_life: 30
-  sous: 1
+  max_life: 20
+  sous: 10
   _healthBarFill: {fileID: 5597269680814888880}
 --- !u!114 &-7865899110598137445
 MonoBehaviour:
