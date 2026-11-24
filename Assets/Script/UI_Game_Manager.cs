@@ -12,13 +12,28 @@ public class UI_Game_Manager : MonoBehaviour
 
     [SerializeField] private Map _map;
 
+    [SerializeField] private int _costTower1;
+    [SerializeField] private int _costTower2;
+    [SerializeField] private int _costTower3;
+    [SerializeField] private int _costTower4;
+
     [SerializeField] private Image _healthBarFilling;
     [SerializeField] private TextMeshProUGUI _currencyText;
 
     [SerializeField] private GameObject world;
 
+    private int _currentCurrency = 0;
+
     private GameObject _prefabToUse;
     private MapElement _currentMapElement;
+
+    private Currency_Manager _currencyManager;
+
+
+    private void Start()
+    {
+        _currencyManager = world.GetComponent<Currency_Manager>();
+    }
 
     private void CreatePrefabInstance()
     {
@@ -52,10 +67,52 @@ public class UI_Game_Manager : MonoBehaviour
 
                 if (hasClickMouse)
                 {
-                    if (_currentMapElement.TryConfirmPlacement())
+                    // test thunes
+                    if (_prefabToUse == _tower1Prefab)
                     {
-                        _currentMapElement = null;   
+                        if (_currentCurrency >= _costTower1)
+                        {
+                            if (_currentMapElement.TryConfirmPlacement())
+                            {
+                                _currentMapElement = null;
+                                _currencyManager.RemoveCurrency(_costTower1);
+                            }
+                        }
                     }
+                    else if (_prefabToUse == _tower2Prefab)
+                    {
+                        if (_currentCurrency >= _costTower2)
+                        {
+                            if (_currentMapElement.TryConfirmPlacement())
+                            {
+                                _currentMapElement = null;
+                                _currencyManager.RemoveCurrency(_costTower2);
+                            }
+                        }
+                    }
+                    else if (_prefabToUse == _tower3Prefab)
+                    {
+                        if (_currentCurrency >= _costTower3)
+                        {
+                            if (_currentMapElement.TryConfirmPlacement())
+                            {
+                                _currentMapElement = null;
+                                _currencyManager.RemoveCurrency(_costTower3);
+                            }
+                        }
+                    }
+                    else if (_prefabToUse == _tower4Prefab)
+                    {
+                        if (_currentCurrency >= _costTower4)
+                        {
+                            if (_currentMapElement.TryConfirmPlacement())
+                            {
+                                _currentMapElement = null;
+                                _currencyManager.RemoveCurrency(_costTower4);
+                            }
+                        }
+                    }
+
                 }
                 if (hasInteracted)
                 {
@@ -120,6 +177,7 @@ public class UI_Game_Manager : MonoBehaviour
 
     public void UpdateCurrencyAmount(int CurrentCurrency)
     {
+        _currentCurrency = CurrentCurrency;
         _currencyText.text = CurrentCurrency.ToString();
     }
 }

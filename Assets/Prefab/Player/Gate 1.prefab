@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fd492e7b0f050b47a200ff04e2cba69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health_Wall
-  max_life: 100
+  max_life: 600
   _MainUI: {fileID: 0}
   _GameOverUI: {fileID: 2683832592394184382, guid: 8dcff9402fc9818419031f7ebaa4b7d8, type: 3}
 --- !u!1001 &10167836973098217

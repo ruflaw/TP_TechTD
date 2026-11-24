@@ -82,7 +82,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1795c7305d32324ba36da6eac91d233, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health_Root
-  max_life: 30
+  max_life: 50
 --- !u!1001 &2279871879328293161
 PrefabInstance:
   m_ObjectHideFlags: 0

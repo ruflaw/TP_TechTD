@@ -681,8 +681,13 @@ MonoBehaviour:
   _tower3Prefab: {fileID: 438246703732173089, guid: 64966ad2e1d5be04dbab3361f14fcafa, type: 3}
   _tower4Prefab: {fileID: 4014057296611145645, guid: 4b657d6bcac65e84fbeda6957c57c23d, type: 3}
   _map: {fileID: 0}
+  _costTower1: 150
+  _costTower2: 100
+  _costTower3: 250
+  _costTower4: 200
   _healthBarFilling: {fileID: 6351391256713316421}
   _currencyText: {fileID: 2866179764507057702}
+  world: {fileID: 0}
 --- !u!1 &2348439401163797865
 GameObject:
   m_ObjectHideFlags: 0
