@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -6233240721740874819}
   - component: {fileID: -1468615842824536872}
   - component: {fileID: -5354540889931143802}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EN_fatty
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 5409216876605742671}
   - component: {fileID: 7038827134602665100}
   - component: {fileID: 1278645636454223216}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 5774990350213242149}
   - component: {fileID: 5715153522640098005}
   - component: {fileID: 3928199007311829551}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 4565293295460516368}
   - component: {fileID: 883023173728911269}
   - component: {fileID: 18338524112310736}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,6 +455,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7134394785105016132, guid: 9bdbd90029f024a4eac746f62a617a5f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5151492872390713093, guid: 9bdbd90029f024a4eac746f62a617a5f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5069531478518834764, guid: 9bdbd90029f024a4eac746f62a617a5f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -5017971254852617305, guid: 9bdbd90029f024a4eac746f62a617a5f, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.94019336
@@ -471,6 +483,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: character-g
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9bdbd90029f024a4eac746f62a617a5f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250163066507786643, guid: 9bdbd90029f024a4eac746f62a617a5f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788240856288092216, guid: 9bdbd90029f024a4eac746f62a617a5f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303906797054990637, guid: 9bdbd90029f024a4eac746f62a617a5f, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8891244130364874969, guid: 9bdbd90029f024a4eac746f62a617a5f, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.8170907
@@ -482,6 +510,10 @@ PrefabInstance:
     - target: {fileID: 8891244130364874969, guid: 9bdbd90029f024a4eac746f62a617a5f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -70.411
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908311948669537042, guid: 9bdbd90029f024a4eac746f62a617a5f, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -553,9 +585,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 199.078
       objectReference: {fileID: 0}
+    - target: {fileID: -6884815727347347827, guid: 9b6ed46851548f240a6632160511c69c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 9b6ed46851548f240a6632160511c69c, type: 3}
       propertyPath: m_Name
       value: blaster-f
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9b6ed46851548f240a6632160511c69c, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6551238392589077143, guid: 9b6ed46851548f240a6632160511c69c, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

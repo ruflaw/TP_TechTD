@@ -43,7 +43,7 @@ public class UI_Game_Manager : MonoBehaviour
         bool hasClickMouse = InputSystem.actions.FindAction("Attack").WasPressedThisFrame();
         bool hasInteracted = InputSystem.actions.FindAction("Interact").WasPressedThisFrame();
 
-        bool hasHit = Physics.Raycast(ray, out RaycastHit hit);
+        bool hasHit = Physics.Raycast(ray, out RaycastHit hit, 5000f, Physics.AllLayers, QueryTriggerInteraction.Ignore);
         if (hasHit)
         {
             if ( _currentMapElement != null)

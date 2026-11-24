@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5887156051803737437}
   - component: {fileID: 6688329752948021810}
   - component: {fileID: 2751663801434559285}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EN_Soldier
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -152,7 +152,7 @@ GameObject:
   - component: {fileID: 9089909266253693806}
   - component: {fileID: 8294820142232110762}
   - component: {fileID: 7293481857971390176}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 1009572651813416156}
   - component: {fileID: 2069457882902369883}
   - component: {fileID: 9212578448578304802}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: HealthFill
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +303,7 @@ GameObject:
   - component: {fileID: 8388850385491811645}
   - component: {fileID: 2595185902509704636}
   - component: {fileID: 4035406818268536214}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -459,6 +459,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: blaster-m
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f2cf39b09e60dfa4dbf2cce222e669bd, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -529,6 +533,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7134394785105016132, guid: 11c4f5d88554ae148bf7b44fa0455854, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5151492872390713093, guid: 11c4f5d88554ae148bf7b44fa0455854, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -5069531478518834764, guid: 11c4f5d88554ae148bf7b44fa0455854, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: -5017971254852617305, guid: 11c4f5d88554ae148bf7b44fa0455854, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.85103667
@@ -545,6 +561,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: character-d
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 11c4f5d88554ae148bf7b44fa0455854, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3250163066507786643, guid: 11c4f5d88554ae148bf7b44fa0455854, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5788240856288092216, guid: 11c4f5d88554ae148bf7b44fa0455854, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8303906797054990637, guid: 11c4f5d88554ae148bf7b44fa0455854, type: 3}
+      propertyPath: m_Layer
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8891244130364874969, guid: 11c4f5d88554ae148bf7b44fa0455854, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.8897767
@@ -556,6 +588,10 @@ PrefabInstance:
     - target: {fileID: 8891244130364874969, guid: 11c4f5d88554ae148bf7b44fa0455854, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: -54.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 8908311948669537042, guid: 11c4f5d88554ae148bf7b44fa0455854, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
