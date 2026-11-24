@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class Health_Wall : MonoBehaviour
@@ -7,28 +8,30 @@ public class Health_Wall : MonoBehaviour
     [SerializeField] private UI_Game_Manager _MainUI;
     [SerializeField] private GameObject _GameOverUI;
     private int life = 1;
+    private float lifePercent = 1f;
 
     void Start()
     {
         life = max_life;
-        _MainUI.UpdateHealthPercent(life/max_life);
+        _MainUI.UpdateHealthPercent(lifePercent);
     }
 
     
     public void TakeDamage(int damage)
     {
-        life -= damage;
-        if (life <= 0)
+        if (life - damage <= 0)
         {
-            print("less than 0 hp");
             OnDeath();
         }
-        _MainUI.UpdateHealthPercent(life / max_life);
+        life -= damage;
+        float templife = life;
+        float tempMaxLife = max_life;
+        lifePercent = templife/tempMaxLife;
+        _MainUI.UpdateHealthPercent(lifePercent);
     }
 
     public void OnDeath()
     {
-        print("JustDieDude");
         Instantiate(_GameOverUI);
         Time.timeScale = 0;
     }
