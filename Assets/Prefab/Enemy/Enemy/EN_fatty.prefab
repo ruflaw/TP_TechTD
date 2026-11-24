@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -5354540889931143802}
   m_Layer: 0
   m_Name: EN_fatty
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   max_life: 100
   sous: 0
-  world: {fileID: 0}
 --- !u!114 &5885117967208262092
 MonoBehaviour:
   m_ObjectHideFlags: 0

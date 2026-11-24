@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1107380868274435343}
   m_Layer: 0
   m_Name: EN_Prisonner
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52,7 +52,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Health
   max_life: 30
   sous: 0
-  world: {fileID: 0}
 --- !u!114 &-7865899110598137445
 MonoBehaviour:
   m_ObjectHideFlags: 0

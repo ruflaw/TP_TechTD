@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2751663801434559285}
   m_Layer: 0
   m_Name: EN_Soldier
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,8 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
   max_life: 50
-  sous: 0
-  world: {fileID: 0}
+  sous: 1000
 --- !u!114 &-5106059928823643065
 MonoBehaviour:
   m_ObjectHideFlags: 0
