@@ -4,14 +4,17 @@ public class Generator : MonoBehaviour
 {
     [SerializeField] private int sous;
     [SerializeField] private float genDelay;
+    [SerializeField] private float genTimer = 0f;
     private GameObject world;
 
     void Update()
     {
-        if (genDelay <= Time.time)
+        genTimer += Time.deltaTime;
+
+        if (genTimer >= genDelay)
         {
             world.GetComponent<Currency_Manager>().AddCurrency(sous);
-            genDelay += Time.time;
+            genTimer = 0f;
         }
     }
 
