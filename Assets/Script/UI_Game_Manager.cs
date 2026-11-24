@@ -15,6 +15,8 @@ public class UI_Game_Manager : MonoBehaviour
     [SerializeField] private Image _healthBarFilling;
     [SerializeField] private TextMeshProUGUI _currencyText;
 
+    [SerializeField] private GameObject world;
+
     private GameObject _prefabToUse;
     private MapElement _currentMapElement;
 
@@ -25,6 +27,11 @@ public class UI_Game_Manager : MonoBehaviour
         var go = Instantiate(_prefabToUse);
         _currentMapElement = go.GetComponent<MapElement>();
         _currentMapElement.Initialize(_map);
+        if (go.gameObject.TryGetComponent<Generator>(out var generator))
+        {
+            generator.enabled = true;
+            generator.AddWorldRef(world);
+        }
     }
 
     private void Update()

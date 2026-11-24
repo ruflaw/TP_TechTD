@@ -283,6 +283,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8798453406358279523, guid: c5408205d63c8654199126be590b9693, type: 3}
+      propertyPath: _MainUI
+      value: 
+      objectReference: {fileID: 612920878}
     - target: {fileID: 1159991527605739488, guid: c5408205d63c8654199126be590b9693, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6
@@ -1142,6 +1146,10 @@ PrefabInstance:
       propertyPath: _map
       value: 
       objectReference: {fileID: 2083890430}
+    - target: {fileID: 2210658085319414316, guid: 60a4a51da2e385e45a3c46e8133beafa, type: 3}
+      propertyPath: world
+      value: 
+      objectReference: {fileID: 1859692934}
     - target: {fileID: 2564888285173259152, guid: 60a4a51da2e385e45a3c46e8133beafa, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1407,9 +1415,61 @@ PrefabInstance:
       propertyPath: m_Name
       value: World
       objectReference: {fileID: 0}
+    - target: {fileID: 7132571529193834454, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _MainUI
+      value: 
+      objectReference: {fileID: 612920878}
     - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
       propertyPath: _path.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[0].path
+      value: 
+      objectReference: {fileID: 1368722897}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[1].path
+      value: 
+      objectReference: {fileID: 1368722897}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[0].spawn
+      value: 
+      objectReference: {fileID: 1475843794}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[1].spawn
+      value: 
+      objectReference: {fileID: 1475843794}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[0]._enemies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[0]._enemies.Array.data[1].delay
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[1]._enemies.Array.data[0].delay
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[0]._enemies.Array.data[0].number
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[0]._enemies.Array.data[1].number
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[1]._enemies.Array.data[0].number
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[0]._enemies.Array.data[0].delay_end
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[0]._enemies.Array.data[1].delay_end
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1767,6 +1827,11 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
+--- !u!1 &1859692934 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6599583730475035838, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+  m_PrefabInstance: {fileID: 1387092439}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1953670797
 GameObject:
   m_ObjectHideFlags: 0

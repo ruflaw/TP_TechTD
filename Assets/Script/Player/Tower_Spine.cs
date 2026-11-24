@@ -9,7 +9,6 @@ public class Tower_Spine : MonoBehaviour
     [SerializeField] private int damage;
 
     private float nextShoot;
-    private GameObject target;
 
     private void Update()
     {
