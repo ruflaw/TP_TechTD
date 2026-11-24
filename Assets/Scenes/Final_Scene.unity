@@ -819,7 +819,7 @@ PrefabInstance:
       objectReference: {fileID: 612920878}
     - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
       propertyPath: _path.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
       propertyPath: _path.Array.data[0].path
@@ -830,6 +830,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1389242056}
     - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[2].path
+      value: 
+      objectReference: {fileID: 1118126993}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
       propertyPath: _path.Array.data[0].spawn
       value: 
       objectReference: {fileID: 1475843794}
@@ -837,6 +841,10 @@ PrefabInstance:
       propertyPath: _path.Array.data[1].spawn
       value: 
       objectReference: {fileID: 670110264}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[2].spawn
+      value: 
+      objectReference: {fileID: 1084236272}
     - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
       propertyPath: _path.Array.data[0]._enemies.Array.size
       value: 1
@@ -850,12 +858,20 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[2]._enemies.Array.data[0].enemy
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
       propertyPath: _path.Array.data[0]._enemies.Array.data[1].number
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
       propertyPath: _path.Array.data[1]._enemies.Array.data[0].number
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7228496404455836550, guid: 18d3551bb31fadb4ca0a3286f2241396, type: 3}
+      propertyPath: _path.Array.data[2]._enemies.Array.data[0].number
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
